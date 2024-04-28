@@ -8,8 +8,8 @@ class IsAdminPermission(permissions.BasePermission):
         return False
 
 
-class IsTecherPermission(permissions.BasePermission):
+class IsTecherAndAdminPermission(permissions.BasePermission):
     def has_permission(self, request, view):
-        if request.user.status == 'teacher' or 'admin':
+        if request.user.status in ['admin', 'teacher']:
             return True
         return False

@@ -42,6 +42,10 @@ INSTALLED_APPS = [
     'apps.users',
     'apps.common',
     'apps.structure',
+    #build in
+    
+    'rest_framework',
+    'rest_framework_simplejwt',
 ]
 
 MIDDLEWARE = [
